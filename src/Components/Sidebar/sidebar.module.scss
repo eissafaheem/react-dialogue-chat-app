@@ -5,8 +5,23 @@
     position: relative;
     border-right: 1px solid #128C7E;
     h1{
-        font-size: xx-large;
+        span{
+            font-size: xx-large;
+        }
         padding: 1rem;
+        display: flex;
+        align-items: center;
+        // justify-content: center;
+        img{
+            height: 3rem;
+        }
+        .logout{
+            margin-left: 5rem;
+            &:hover{
+                color: rgb(10, 224, 46);
+                cursor: pointer;
+            }
+        }
     }
     .header{
         display: flex;

@@ -13,10 +13,10 @@ export default function ChatItem(props:any) {
             </div>
             <div className={styles.right}>
                 <div className={styles.name}>
-                    {props.conversation.user2.username}
+                    {props.conversation.user2.userName}
                 </div>
                 <div className={styles.date}>
-                    {props.conversation.user2.user_id}
+                    {props.conversation.user2.userId}
                 </div>
             </div>
         </div>
