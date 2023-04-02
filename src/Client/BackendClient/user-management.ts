@@ -1,6 +1,6 @@
 import { User } from "../../Classes/User";
 
-export class UserManagement{
+export class UserManagementClient{
     async addUser(newuser: User){
         return new Promise((resolve,reject)=>{
             resolve(null);

@@ -15,7 +15,6 @@ export class MessageManagement{
     }
     
     async deleteMessage(messageId: string){
-        {/* TODO : In future versions */}
         return new Promise((resolve,reject)=>{
             resolve(null);
         })

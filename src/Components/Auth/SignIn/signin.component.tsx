@@ -13,9 +13,9 @@ export default function Signin(){
                     <img className={styles.logo} src="/logo512.png" alt="" />
                 </div>
                 <h1>Welcome to have a Dialogue!</h1>
-                <form onSubmit={signInHandler}>
-                    <input type="text" placeholder="Enter your userId"/>
-                    <input type="password" placeholder="Enter your password"/>
+                <form onSubmit={(event)=>signInHandler(event)}>
+                    <input type="text" placeholder="Enter your userId" name="userId"/>
+                    <input type="password" placeholder="Enter your password" name="password"/>
                     <button type="submit">Signin</button>
                 </form>
                 <span>New here? 
