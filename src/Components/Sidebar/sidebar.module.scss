@@ -16,7 +16,7 @@
             height: 3rem;
         }
         .logout{
-            margin-left: 5rem;
+            margin-left: 7rem;
             &:hover{
                 color: rgb(10, 224, 46);
                 cursor: pointer;
@@ -26,10 +26,18 @@
     .header{
         display: flex;
         height: 10%;
-        width: 100%;
+        width: 90%;
+        padding: 0 1rem 0 1rem;
         align-items: center;
         justify-content: center;
         // border: 1px solid red;
+        .search_button{
+            margin-left: 0.5rem;
+            cursor: pointer;
+            &:hover{
+                color: greenyellow;
+            }
+        }
 
     }
     .content{
@@ -39,7 +47,7 @@
         // border: 2px solid red;
     }
 
-    button{
+    .new_chat_btn{
         display: flex;
         align-items: center;
         justify-content: center;

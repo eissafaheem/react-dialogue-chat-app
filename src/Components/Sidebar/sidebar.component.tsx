@@ -7,7 +7,8 @@ export default function Sidebar(props: any) {
     const {
         handleLogout,
         handleSearch,
-        searchedConversations
+        searchedConversations,
+        clearInput
     } = useSidebarHook();
     return (
         <>
@@ -20,10 +21,11 @@ export default function Sidebar(props: any) {
                 <div className={styles.logout} onClick={handleLogout}>Logout</div>
                 </h1>
 
-                <button onClick={() => props.setIsModalVisible(true)}>New Chat</button>
+                <button onClick={() => props.setIsModalVisible(true)} className={styles.new_chat_btn}>New Chat</button>
 
                 <div className={styles.header}>
                     <input type="text" placeholder="Search chat" onChange={(e)=>handleSearch(e)}/>
+                    <div className={styles.search_button} onClick={()=>clearInput()}>Clear</div>
                 </div>
                 <div className={styles.content}>
                     <ChatList searchedConversations={searchedConversations}/>

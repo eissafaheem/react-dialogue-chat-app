@@ -16,7 +16,8 @@ export const useSidebarHook = () =>{
     function handleSearch(event:any){
         let result:Conversation[] = []
         for(let i=0;i<conversations.length;i++){
-            if(conversations[i].user1.userName.toLowerCase() === event.target.value){
+            console.log("Yes");
+            if(conversations[i].user1.userName.toLowerCase().includes(event.target.value.toLowerCase())){
                 result = [...[conversations[i]], ...result]
                 console.log(result);
             }
@@ -28,9 +29,14 @@ export const useSidebarHook = () =>{
 
     }
 
+    function clearInput(){
+        setSearchedConversations([]);
+    }
+
     return {
         handleLogout, 
         handleSearch,
-        searchedConversations
+        searchedConversations,
+        clearInput
     };
 }
