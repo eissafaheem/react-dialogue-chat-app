@@ -7,12 +7,12 @@ export class Message {
     messageText: string;
     sentAt: Date;
   
-    constructor(messageId?: string, senderId?: User, receiver?: User, message_text?: string, sent_at?: Date) {
+    constructor(messageId?: string, sender?: User, receiver?: User, messageText?: string, sentAt?: Date) {
       this.messageId = messageId || undefined;
-      this.sender = senderId || undefined;
+      this.sender = sender || undefined;
       this.receiver = receiver || undefined 
-      this.messageText = message_text || '';
-      this.sentAt = sent_at || new Date();
+      this.messageText = messageText || '';
+      this.sentAt = sentAt || new Date();
     }
   }
 

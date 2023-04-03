@@ -1,10 +1,9 @@
 import React from "react";
 import styles from "./newchat.module.scss"
+import { useNewChatHook } from "./newchat.hook";
 export default function NewChat(props:any) {
 
-    function handleAddChat() {
-        props.setIsModalVisible(false);
-    }
+    let {handleAddChat} = useNewChatHook(props);
 
     return (
         <>
