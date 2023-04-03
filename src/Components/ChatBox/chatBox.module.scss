@@ -1,0 +1,100 @@
+.main_container {
+    height: 100%;
+    width: 100%;
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        // justify-content: center;
+        height: 9%;
+        width: 100%;
+        background-color: #ece5dd;
+        // border-bottom: 1px solid grey;
+        .profile{
+            height: 3rem;
+            width: 3rem;
+            background-color: white;
+            // padding: 1rem;
+            border-radius: 100rem;
+            margin-left: 1rem;
+            // margin-bottom: 0.5rem;
+            border: 1px solid black;
+        }
+        .name{
+            margin-left: 1rem;
+            color: black;
+        }
+    }
+
+    .content {
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 79%;
+        background-color: white;
+        
+        .recieverChat {
+            float: left;
+            text-align: left;
+            margin: 0.5rem;
+            width: calc(100% - 1rem);
+            div{
+                max-width: 50%;
+                float: left;
+                background-color: rgb(0, 15, 75);
+                padding: 1rem;
+                border-radius: 50px;
+            }
+        }
+        
+        .senderChat {
+            float: right;
+            text-align: right;
+            margin: 0.5rem;
+            width: calc(100% - 1rem);
+            div{
+                max-width: 50%;
+                float: right;
+                background-color: rgb(0, 75, 0);
+                padding: 1rem;
+                border-radius: 50px;
+            }
+        }
+
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 10%;
+        width: 100%;
+        background-color: #ece5dd;
+        // border-top: 1px solid grey;
+        margin-top: 0.5rem;
+
+        input {
+            margin-left: 2rem;
+        }
+
+        button {
+            height: 2rem;
+            width: 4rem;
+            background-color: green;
+            border: none;
+            margin-right: 2rem;
+            border-radius: 5rem;
+            &:hover{
+                background-color: rgb(0, 102, 0);
+            }
+            &:active{
+                background-color: rgb(0, 59, 0);
+            }
+            &:focus{
+                outline: none;
+            }
+        }
+    }
+}

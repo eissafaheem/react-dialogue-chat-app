@@ -1,0 +1,24 @@
+.item_container{
+    // width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    // justify-content: center;
+    height: 5rem;
+    padding-left: 1rem;
+    border: 1px solid #128C7E;
+    text-decoration: none;
+    &:focus, &:hover, &:visited, &:link, &:active {
+        text-decoration: none;
+    }
+    .profile{
+        height: 3rem;
+        width: 3rem;
+        background-color: white;
+        border-radius: 100px;
+    }
+
+    .right{
+        padding-left: 1rem;
+    }
+}
