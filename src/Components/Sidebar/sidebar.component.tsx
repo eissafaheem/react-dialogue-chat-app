@@ -4,7 +4,12 @@ import styles from "./sidebar.module.scss"
 import { useSidebarHook } from "./sidebar.hook";
 export default function Sidebar(props: any) {
 
-    const {handleLogout} = useSidebarHook();
+    const {
+        handleLogout,
+        handleSearch,
+        searchedConversations,
+        clearInput
+    } = useSidebarHook();
     return (
         <>
             <div className={styles.main_container}>
@@ -16,13 +21,14 @@ export default function Sidebar(props: any) {
                 <div className={styles.logout} onClick={handleLogout}>Logout</div>
                 </h1>
 
-                <button onClick={() => props.setIsModalVisible(true)}>New Chat</button>
+                <button onClick={() => props.setIsModalVisible(true)} className={styles.new_chat_btn}>New Chat</button>
 
                 <div className={styles.header}>
-                    <input type="text" placeholder="Search chat" />
+                    <input type="text" placeholder="Search chat" onChange={(e)=>handleSearch(e)}/>
+                    <div className={styles.search_button} onClick={()=>clearInput()}>Clear</div>
                 </div>
                 <div className={styles.content}>
-                    <ChatList />
+                    <ChatList searchedConversations={searchedConversations}/>
                 </div>
             </div>
         </>

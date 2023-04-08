@@ -16,6 +16,7 @@ export default function SignUp(){
                 <h1>Start a Dialogue!</h1>
                 <form onSubmit={handleSignUp}>
                     <input type="text" placeholder="Enter your userId"/>
+                    <input type="text" placeholder="Enter your name"/>
                     <input type="password" placeholder="Enter your password"/>
                     <input type="password" placeholder="Re-enter your password"/>
                     <button type="submit">SignUp</button>

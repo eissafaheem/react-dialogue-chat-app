@@ -19,6 +19,7 @@ export default function ChatItem(props:any) {
                     {props.conversation.user1.userId}
                 </div>
             </div>
+            <div className={styles.delete}>Delete</div>
         </div>
         </>
     )
